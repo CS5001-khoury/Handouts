@@ -1,2 +1,3 @@
-# InclassActivites
-Repository for in class activities
+# Handouts
+
+Repository for Handouts and activities for students to have easy access towards. 
