@@ -59,7 +59,11 @@ To be successful in this course, you must come to any in-person sessions prepare
 
 ## Assessment
 
-Course Assignments will be broken down into categories that can be found on the Assignments page of the course canvas shell. There you will find percentages of each category, along with policies for individual categories such as dropping the lowest grade or not. Please note:
+Course Assignments will be broken down into categories that can be found on the Assignments page of the course canvas shell. There you will find percentages of each category, along with policies for individual categories such as dropping the lowest grade or not. 
+
+In general assignments are either formative or summative. Formative assignments document your learning process, and there are often ways they can be redone showing that you learned the material. Summative assignments are your opportunity to demonstrate what you know, and are show your ability level on the topic. Summative assignments are often time restricted and have limited attempts.
+
+Please note:
 
 <!--
 | Category | Percent of Final Grade |
@@ -77,7 +81,7 @@ Course Assignments will be broken down into categories that can be found on the 
 
 ### Late/Make-Up Policy
 
-For on-campus students, most lecture and lab activities will be expected to be done **in class**, and as such, making up those activities may be limited based on the assignment. Homework activities will have a **Due Date** and **Available Until** date. The due date is the expected due date for the item. The available by date is a no questions asked late window (usually 3 days). This is to take into account different learning rates, standard accommodations, and sometimes we all need accommodation because of life. After the *available until* date is a hard cutoff, no exceptions (even if your internet goes down!). Why? Because the due date had already happened. Thinks like internet going down, your dog ate your homework, etc are meant to be handled by the extra window already! For documented *extraordinary* circumstances (being hospitalized multiple days, etc), we will consider additional accommodations. 
+For on-campus students, most lecture and lab activities will be expected to be done **in class**, and as such, making up those activities may be limited based on the assignment. Homework activities will have a **Due Date** and **Available Until** date. The due date is the expected due date for the item. The available by date is a no questions asked late window (usually 3 days). This is to take into account different learning rates, standard accommodations, and sometimes we all need accommodation because of life. After the *available until* date is a hard cutoff, no exceptions (even if your internet goes down!). Why? Because the due date had already happened. Issues like internet going down, your dog ate your homework, etc are meant to be handled by the extra window already! For documented *extraordinary* circumstances (being hospitalized multiple days, etc), we will consider additional accommodations. 
 
 ### Tier Mastery Grading (Formative)
 
@@ -88,7 +92,7 @@ Most formative assignments focus on Tier Mastery. Meaning the assignment is grad
 3. Meets
 4. Exceeds
 
-Tests are then placed in those groups with increasing difficulty. If at any point you *fail* to pass all the tests in a group, grading *immediately stops. However, you will be encouraged (and expected) to resubmit your assignment to eventually work your way through Mastery (ideally exceeds)!
+Tests are then placed in those groups with increasing difficulty. If at any point you *fail* to pass all the tests in a group, grading *immediately* stops. However, you will be encouraged (and expected) to resubmit your assignment to eventually work your way through Mastery (ideally exceeds)!
 
 Auto-graded assignments will have the opportunity from the day they are released, so you can check in regularly. Some assignments have a mix of auto-grading and hand-grading, in which case, it will often take a week for us to give feedback for the assignment to be redone.
 
