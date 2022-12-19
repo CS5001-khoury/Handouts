@@ -37,13 +37,15 @@ It is extremely important for you to become engaged in this course. Like most pr
 Students are expected to keep up with the material as it is released each week, to ask for help when they need it (or when feeling overwhelmed), to complete assignments on time, to actively participate in class discussions, to respect your classmates’ right to learn, and to refrain from disruptive behavior (such as trolling). To help students plan, we provide the following weekly cadence for this course:
 
 * Online Videos and Activities  
-  TO BE COMPLETED **BEFORE** weekly lecture/recitation
-* Lecture  
-  This is an activity time in which you will be working on activities with the TA and assignments during this time. Activities can be graded along with attendance. 
-* Lab  
-  This is an activity time in which you will be working on activities with the TA and assignments during this time. Activities can be graded along with attendance.
-* Weekly Homework  
-  Due at the end of the week
+  TO BE COMPLETED **BEFORE** weekly activities
+* Weekly Activities
+  * Lecture  
+    This is an activity time in which you will be working on activities with the TA and assignments during this time. Activities can be graded along with attendance. 
+  * Lab  
+    This is an activity time in which you will be working on activities with the TA and assignments during this time. Activities can be graded along with attendance.
+  * Weekly Homework  
+    Due at the end of the module
+  * Quizzes or Exams  
 
 Modules will not open up unless the past module is marked as done, so you will need to make sure to complete all activities in a timely fashion. When in doubt, follow the modules - as one module per week. 
 
@@ -171,7 +173,7 @@ For personal assistance, here are some of the things that are appropriate:
 
 * Clarifying ambiguities or vague points in class handouts, textbooks, or lectures
 * Discussing or explaining the general class material
-* Providing assistance with Java, in using the system facilities, or with editing and debugging tools
+* Providing assistance with the programming language, in using the system facilities, or with editing and debugging tools
 * Discussing the code that we give out on the assignment
 * Discussing the assignments to better understand them
 * Getting help from anyone concerning programming issues which are clearly more general than the specific project (e.g., what does a particular error message mean?)
