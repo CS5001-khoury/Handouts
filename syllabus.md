@@ -36,7 +36,7 @@ It is extremely important for you to become engaged in this course. Like most pr
 
 Students are expected to keep up with the material as it is released each week, to ask for help when they need it (or when feeling overwhelmed), to complete assignments on time, to actively participate in class discussions, to respect your classmates’ right to learn, and to refrain from disruptive behavior (such as trolling). To help students plan, we provide the following weekly cadence for this course:
 
-* Online Videos and Activities  
+* Online Videos and Readings  
   TO BE COMPLETED **BEFORE** weekly activities
 * Weekly Activities
   * Lecture  
