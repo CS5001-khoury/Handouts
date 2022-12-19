@@ -59,8 +59,9 @@ To be successful in this course, you must come to any in-person sessions prepare
 
 ## Assessment
 
-Course Assignments will be broken down into the following categories:
+Course Assignments will be broken down into categories that can be found on the Assignments page of the course canvas shell. There you will find percentages of each category, along with policies for individual categories such as dropping the lowest grade or not. Please note:
 
+<!--
 | Category | Percent of Final Grade |
 |  :-- | :--: |
 | Lecture (5001) Activities | 10% |
@@ -68,7 +69,7 @@ Course Assignments will be broken down into the following categories:
 | Homework | 40% |
 | Midterm | 10% |
 | Final  | 15% |
-
+-->
 * Categories are subject to minor adjustments / changes throughout the semester. 
 * Category assignments will include a variety of assessment types, including participation / attendance activities
 * Ungraded Assignments, there will be assignments that are ungraded. The most important goal is your learning, so you should not let grades or points affect your reason for doing something!
