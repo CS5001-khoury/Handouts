@@ -155,7 +155,7 @@ For much of what we do, even as face-to-face interactions become possible again,
 2. **Be aware of strong language, all caps, and exclamation points.** It is easy for written text to be misread and misunderstood. Have you ever sent a text message with good intention but your recipient thought you were being rude? If so, then you’ve experienced this firsthand. By being aware of strong language, you can identify potential confusions before sending messages. Tip: Read everything out loud before you send it.
 3. **Be careful with humor and sarcasm.** Certainly, you shouldn’t avoid being funny. We love to see your personality shine through in our classes. Many of the instructional staff are exceptionally funny too. But make certain that it is clear you are being funny and not being rude. Emoticons and smileys can be helpful when conveying humor or sarcasm so that it is read correctly.
 4. **Yes, grammar and spelling matter.** While texting, "textspeak" can b gr8 4 ur friends. In an educational setting (even online), however, keep it a bit more formal. Your written communication should be professional and reflect proper writing style. Save written shortcuts and less than stellar grammar for Snapchat if you must, but follow grammar rules for school.
-5.**Don’t post or share (even privately) inappropriate material.** Enough said here, nothing is truly private online.
+5. **Don’t post or share (even privately) inappropriate material.** Enough said here, nothing is truly private online.
 
 
 **Be forgiving.** Remember that not everyone will know these rules before posting. Try to be understanding of others when they struggle with written communication. It is very different than simply talking to a person face-to-face.
