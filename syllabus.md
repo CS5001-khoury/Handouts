@@ -132,7 +132,7 @@ To progress in the ALIGN program, students are required to meet the grade point 
 The Canvas site for this course will be used to post weekly reading and video-watching assignments, lecture materials, labs, feedback, and grades.
 
 ### Textbooks
-Students are not required to purchase a textbook for this course. Two free, strongly recommended textbooks are listed on the [Resources](resources.md) page, along with additional, recommended materials. Students are urged to obtain and use these resources. While these are not the only materials available on the web, they are the ones that faculty members have identified as being most useful to students. Students are also encouraged to share resources that they find useful so that instructors may consider adding them to the list for future cohorts. It is important to read the materials and watch the videos before attempting the assignments.
+Students are not required to purchase a textbook for this course. Two free, strongly recommended textbooks are listed on the Resources page in canvas, along with additional, recommended materials. Students are urged to obtain and use these resources. While these are not the only materials available on the web, they are the ones that faculty members have identified as being most useful to students. Students are also encouraged to share resources that they find useful so that instructors may consider adding them to the list for future cohorts. It is important to read the materials and watch the videos before attempting the assignments.
 
 <!--
 Piazza
