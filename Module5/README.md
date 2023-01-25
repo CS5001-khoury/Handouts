@@ -3,7 +3,7 @@
 For this workshop, we will first play a game and then visualize the memory structure being sequential data.
 
 > **Sequential Data**  
-> In python both Lists, Tuples, Strings, Sets are ordered sequential data, meaning they are hold multiple pieces of information
+> In python Lists, Tuples, Strings, Sets are ordered sequential data, meaning they are hold multiple pieces of information
 > together in an ordered sequence. For Strings it is a bunch of single characters together. For Lists it is any type in a mutable manner, for tuples it is any type in an immutable manner, and for sets it is unique value of types in an immutable manner. 
 
 ## Wheel of Fortune / Hang'um
