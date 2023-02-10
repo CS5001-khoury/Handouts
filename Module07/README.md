@@ -195,4 +195,4 @@ understand your solutions!
 
 
 [doctest]: https://docs.python.org/3/library/doctest.html
-[python-tutor]: https://pythontutor.com/python-debugger.html
+[python tutor]: https://pythontutor.com/python-debugger.html
