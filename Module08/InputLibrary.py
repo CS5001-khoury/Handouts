@@ -1,3 +1,4 @@
+import sys
 
 
 def get_valid_ing(prompt: str) -> int:
@@ -25,6 +26,6 @@ def get_valid_float(prompt: str) -> float:
         s_value = input(prompt).strip()
         value = float(s_value)
     except ValueError:
-        "Invalid number. Please enter a valid number."
+        print("Invalid number. Please enter a valid number.", file=sys.stderr)
         return get_valid_float(prompt)
     return value

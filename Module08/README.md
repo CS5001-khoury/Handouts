@@ -130,15 +130,18 @@ def get_age() -> int:
 
 The above code will crash, if they type things like "forty-two" instead of 42. As such, we want to be defensive in our
 code. We could use the .isnumeric(), and in this case it would work, but it forces checks in the code. Instead, we could
-combine recursion and type checks to make our code more smooth. 
+combine recursion and type checks to make our code more smooth.
 
 ```python 
+import sys
+
+
 def get_age() -> int:
     try:
         age = input("What is your age? ").strip()
         iage = int(age)
     except ValueError:
-        print("invalid value! must be a hole number")
+        print("invalid value! must be a hole number", file=sys.stderr)
         return get_age()
     return iage
 ```
@@ -146,6 +149,9 @@ def get_age() -> int:
 you can see how it works if you keep entering invalid ages.  This design pattern is considered a lazy pattern
 as it assumes everything is ok, until an exception is raised. 
 
+Also, notice the `file=sys.stderr`. This is common, as you are printing to the 'error log' though 
+for most consoles, that is directly to the console. You can read more about it (very in depth) at 
+[Geeks for Geeks: Stderr]
 
 #### 📝 TASK
 As a group write a function `get_valid_int(prompt: str)->int`, that takes in a string for an argument. 
@@ -157,3 +163,4 @@ type in a float number, and it will be converted to an int.
 
 [TypeError]: https://www.geeksforgeeks.org/handling-typeerror-exception-in-python/
 [Visualize This Age Example]: https://pythontutor.com/visualize.html#code=def%20get_age%28%29%20-%3E%20int%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20age%20%3D%20input%28%22What%20is%20your%20age%3F%20%22%29.strip%28%29%0A%20%20%20%20%20%20%20%20iage%20%3D%20int%28age%29%0A%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20print%28%22invalid%20value!%20must%20be%20a%20hole%20number%22%29%0A%20%20%20%20%20%20%20%20return%20get_age%28%29%0A%20%20%20%20return%20iage%0A%0Aget_age%28%29&cumulative=false&curInstr=17&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%22five%22,%2210%22%5D&textReferences=false
+[Geeks for Geeks: Stderr]: https://www.geeksforgeeks.org/how-to-print-to-stderr-and-stdout-in-python/
