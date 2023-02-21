@@ -1,7 +1,7 @@
 import sys
 
 
-def get_valid_ing(prompt: str) -> int:
+def get_valid_int(prompt: str) -> int:
     """
 
     Args:
