@@ -10,7 +10,7 @@ def get_valid_int(prompt: str) -> int:
     Returns:
 
     """
-    return int(get_valid_float(prompt))
+    return int(get_valid_float(prompt))  # a float can always be converted to an int
 
 
 def get_valid_float(prompt: str) -> float:
