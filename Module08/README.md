@@ -57,6 +57,7 @@ flowchart TD
     OS --> main
     main --> get_name
     get_name --> input
+    input -- /name/ --> get_name
     input -- "What is your name? " --> OS
     OS -- "Display: <br>What is your name? " --> monitor[/monitor/] 
     OS --> keyboard[/"keyboard: waiting for client input"/]
@@ -112,7 +113,7 @@ TypeError: can only concatenate str (not "int") to str
 ### When to use Try/Except
 You could fill your code with try/except statements, but that is often overkill. Instead, the general rule is:
 1. Use try/except when dealing with input from the OS (files, network, keyboard)
-2. Use try/except when you need specific types and are converting
+2. Use try/except when you need specific types and are converting from types that may not match (str to anything)
 
 There are other cases that you will learn as you learn more about designing applications, but those are the most common. 
 
@@ -130,7 +131,7 @@ def get_age() -> int:
 
 The above code will crash, if they type things like "forty-two" instead of 42. As such, we want to be defensive in our
 code. We could use the .isnumeric(), and in this case it would work, but it forces checks in the code. Instead, we could
-combine recursion and type checks to make our code more smooth.
+combine recursion and type checks to make our code smooth.
 
 ```python 
 import sys
@@ -149,15 +150,172 @@ def get_age() -> int:
 you can see how it works if you keep entering invalid ages.  This design pattern is considered a lazy pattern
 as it assumes everything is ok, until an exception is raised. 
 
-Also, notice the `file=sys.stderr`. This is common, as you are printing to the 'error log' though 
+> Also, notice the `file=sys.stderr`. This is common, as you are printing to the 'error log' though 
 for most consoles, that is directly to the console. You can read more about it (very in depth) at 
 [Geeks for Geeks: Stderr]
 
-#### 📝 TASK
+#### 📝 TASK - Getting Valid Numbers
 As a group write a function `get_valid_int(prompt: str)->int`, that takes in a string for an argument. 
 Prompts the client with that argument, and returns a valid int. You should not 
 check for ranges (greater than O or anything), just that is a valid int.  However, the catch is they can also 
-type in a float number, and it will be converted to an int. 
+type in a float number, and it will be converted to an int. You are free to split this into two functions
+`get_valid_float(prompt: str)->float` and `get_valid_int(prompt: str)->int`. When you split it, how can you
+minimize code duplication? 
+
+### Design Discussion
+
+When you use string split, it returns string values in each location  of your list. The problem is that you often
+don't want string values, so converting is important.  The question then becomes where is it best to place
+your try/except statements. Inside the function that converts, or the function that calls the convert function.
+The real answer depends on where do you handle the error at!
+
+Let's assume the following function:
+
+```python
+import sys
+
+
+def convert(values: str) -> tuple:
+    """
+     Breaks a string of format City,Latitude,Longitude
+     converts it to a tuple of City,Latitude,Longitude - str,float,float
+    """
+    try:
+        value_list = values.split(",")
+        if len(value_list) < 3: return tuple([])  # return the empty tuple if something isn't correct 
+        name, lat_s, lon_s = value_list  # not required, just easier to read
+        lat = float(lat_s)
+        lon = float(lon_s)
+    except ValueError:
+        print(f"Value error with ({values}).", file=sys.stderr)
+        return tuple([]) # return the empty list
+    return name, lat, lon 
+
+def main():
+    neu_locations = ("Boston,42.3395683,-71.0922272",
+                     "San Francisco,37.79292,-122.4068792",
+                     "Vancouver,49.2806832,-123.1178707")
+    for location in neu_locations:
+        converted = convert(location)
+        if converted: # an empty list will be False 
+            print(type(converted[1]))
+```
+
+In the example above, the function returns an empty list, so and the resulting code has to check for that. It also
+means an empty list has no meaning. That is fine, and one way to look at it. Another way to look at it is
+that convert should raise the error on up. 
+
+```python
+import sys 
+
+
+def convert(values: str) -> tuple:
+    value_list = values.split(",")
+    if len(value_list) < 3: raise AttributeError("You need a list of the format Name,Latitude,Longitude.")
+    name, lat_s, lon_s = value_list  # not required, just easier to read
+    lat = float(lat_s)
+    lon = float(lon_s)
+    return name, lat, lon
+
+def main():
+    neu_locations = ("Boston,42.3395683,-71.0922272",
+                     "San Francisco,37.79292,-122.4068792",
+                     "Vancouver,49.2806832,-123.1178707")
+    for location in neu_locations:
+        try:
+            converted = convert(location)
+            print(type(converted[1]))
+        except ValueError:
+            ... # means just skip it, but don't crash the program
+        except AttributeError as a:
+            print(a, file=sys.stderr) # print the error message and do nothing else, don't end program
+```
+Try running the above code, and work on changing the values in neu_locations so that exceptions are intentionally
+raised. 
+
+> Discussion:  
+> Which versions do you like better, and why? What are the disadvantages and advantages of each?
+
+
+## File Handling
+File handling is a place where try/except statements are used regularly. Given what you learned above:
+
+> Discuss  
+> Why would you want try/except statements with handling (reading/writing) files? What are some common errors
+> that may happen? (don't worry about the name of the error, just use your own words)
+
+### Reading and Writing Files
+Reading and writing are covered in the course videos. A typical reading with try/catch is
+
+```python
+import sys
+
+try:
+    file = open("poems.txt", 'r')  # open a file for reading
+    for line in file:
+        print("line: " + line.strip())
+    file.close()
+except IOError:
+    print("Error accessing poems.txt", file=sys.stderr)
+```
+
+The same is true with writing files, but instead you use the 'w' attribute to say it is a file to write. For every
+file, you have an open, close, and usually a way to access the contents. 
+
+However, there is also a more "python" way of doing it using what is called a context manager. 
+
+```python 
+try:
+    with open("poems.txt", 'r') as file: 
+        for line in file:
+            print("line: " + line.strip())
+except FileNotFoundError:
+    print("Poems.txt not found!")
+except IOError as a:
+    print(a)
+```
+
+The `with` keyword is critical, as are the indents. It automatically closes the file when done reading. Everything
+inside the with block has access to the file variable, and when the block is done, the file is closed. This is the 
+preferred way to handle files in python.
+
+### Reading and processing?
+
+A common question is when reading files is how much should one do when reading the file. The answer tends to be straight 
+forward
+1. Unless the file is too large, read it into a list, manipulate that list.
+2. If the file needs converted (strings turned to ints for example), convert it, then load those values into a list.
+
+As such, let's say you have a bunch of numbers in a file, that need to be floats. You could write something like the
+following.
+
+```python 
+def load_file(file_name: str) -> tuple:
+    values = []
+    try:
+        with open(file_name) as file: # read is default and be left off
+            for line in file:
+                try:
+                    values.append(float(line.strip()))
+                except ValueError:
+                    ... # skip that line, maybe good to print an error, but decided not to this time
+    except FileNotFoundError:
+        print(f"{file_name} not found!")
+    except IOError as io:
+        print(io)
+    return tuple(values)
+```
+
+> Discussion:
+> Discuss the above code. What parts make sense, what parts could use more elaboration. What benefits
+> would this have for the greater program? For a deeper connection, how does this help
+> other functions to be pure functions?
+
+#### 📝 TASK - Try it out
+Take the  above code, and try it out on a "dummy file" you create. Dummy files are common, for testing file reading
+code. They are just files you create with arbitrary data!! Also write some other functions that can use
+the results generated by load_file. 
+
 
 
 
