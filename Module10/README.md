@@ -13,7 +13,7 @@ Here are a few to help you:
 * dict (dictionary) - a mutable mapping of keys to values
 
 
-Technically, with those types (actually less) it would be possible to write most programs. However, it would be a lot of work. We can make our lives easier by creating our own `types`. We can do this by creating our own `classes`. A `class` is a blueprint for creating objects. An `object` is an instance of a class. 
+Technically, with those types it would be possible to write most programs. However, it would be a lot of work. We can make our lives easier by creating our own `types`. We can do this by creating our own `classes`. A `class` is a blueprint for creating objects. An `object` is an instance of a class. 
 
 Another way to put it, we get to make our own legos! We then use these legos to build our programs.
 
@@ -28,7 +28,7 @@ Another way to put it, we get to make our own legos! We then use these legos to 
 Anything that is indented under that class "belongs" to that class/object.
 
 > A note on class/object  
-> The terms are interchangeable in python. For some people, it helps to think of the class a blueprint, but once the value is created in memory, it is an object. The more you deal with memory structures, the more it helps to have different terms, but for now treat them as interchangeable.
+> The terms are interchangeable in python. For some people, it helps to think of the class as a blueprint, but once the value is created in memory, it is an object. The more you deal with memory structures, the more it helps to have different terms, but for now treat them as interchangeable.
 
 
 ## Creating an Object
@@ -113,7 +113,14 @@ By using the `@property` decorator, we can now access the values.
     1999
 ```
 
-But we can't write to the values. 
+But we can't write to the values.  Trying the following would produce an error:
+    
+```python
+    >>> movie.name = "The Matrix Reloaded"
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    AttributeError: can't set attribute
+```
 
 However, since rating is not private, we can still write to it. 
 
@@ -123,7 +130,7 @@ However, since rating is not private, we can still write to it.
     4
 ```
 
-It  is also common (especially in other languages), to create two functions for every attribute, a `get` and a `set`. In python, they will say `get_rating` and `set_rating`. We can do this by using the `@property` decorator, and then `@variable_name.setter` decorator. This is more advanced than this course, but it is worth exploring on your own. The [code.py](code.py) file has an example of this, and why it is useful.
+It  is also common (especially in other languages), to create two functions for every attribute, a `get` and a `set`. In python, we can do this by using the `@property` decorator, and then `@variable_name.setter` decorator. This is more advanced than this course, but it is worth exploring on your own. The [code.py](code.py) file has an example of this, and why it is useful as we can control some conditions before the value is changed. 
 
 ## Methods
 Objects have methods, which are functions the "belong" to that object. It means these functions can use the information stored inside of the object, since the `self` parameter is a requirement for a method. 
