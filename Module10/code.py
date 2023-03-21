@@ -2,7 +2,7 @@
 
 
 
-class Movie:
+class Movie: #notice class has its own docstring!
     """Movie class holds title of the movie, the cast, the rating, and year of release. 
 
     It prints in a nicely formatted string, and has a method to check if an actor is in the cast.
@@ -101,6 +101,16 @@ class Movie:
         """Returns a nicely formatted string of the movie. of the format Stars MovieName"""
         return f"{self.__convert_rating(self.rating):<{7}}{self.name}"
     
+    def __eq__(self, o: object) -> bool:
+        """Overrides the default implementation, checking to make sure the movie is the same title and year, then the are equal."""
+        if isinstance(o, Movie): ## check if the object is a movie
+            return self.name == o.name and self.year == o.year
+        return False
+    
+    def __hash__(self) -> int:
+        """Overrides the default implementation, hashing the movie name and year. 
+        This would allow us to store the movie in a set, as it provides properties to make sure it is unique"""
+        return hash((self.name, self.year))
 
 
 def sample_run():
