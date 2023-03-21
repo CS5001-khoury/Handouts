@@ -212,4 +212,4 @@ Then for each component, you think about what attributes and methods it needs fo
 
 ## Finally
 
-As a group, work on a couple coding practices. Make sure to copy the code into python tutor to discuss the results/see the memory. 
+As a group, work on a couple coding practices. Make sure to copy the code into python tutor to discuss the results/see the memory. What happens when an object is passed as a parameter, and then you modify it inside that function?  
