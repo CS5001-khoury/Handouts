@@ -192,3 +192,17 @@ Then we can do the following:
 **TASK** Look review the code in the [code.py](code.py) file. Discuss how it can be used in star_rating_app.py. What are the pros and cons of using it? What functions would you have to change? 
 
 ## Encapsulation
+
+In Object Oriented Programming (OOP), you have four main concepts: Abstraction, Encapsulation, Inheritance, and Polymorphism. We have already discussed Abstraction, and we will discuss Inheritance and Polymorphism in 5004. Encapsulation is the concept of hiding the implementation details of an object. Or another way to look at it, you assume your block works, so you don't need to know the details of how it works. 
+
+Whenever you work with objects, you try to set them up so they are a single set of related ideas! The "atom" of that idea if you will. You can then build these different blocks together to make a program. Often, you determine what needs to be objects using the same design process you use for functions, but instead you think about the components you need for you program. 
+
+Then for each component, you think about what attributes and methods it needs for that idea to be "complete". For this reason, OOP is the main paradigm used in industry, as it allows team members to focus building very specific objects, while other people assemble those objects into working programs. 
+
+> Discussion Topic:  
+> In your own words, describe encapsulation, and discuss with the Movie object which would be good function to exist in movie or not. The "answer" is less than you think, as ideally Movie should only have the methods and attributes that are needed to represent a movie, and other code deals with parsing the file or input from the client. This allows you to use the movie object across programs in different ways!
+
+
+## Finally
+
+As a group, work on a couple coding practices. Make sure to copy the code into python tutor to discuss the results/see the memory. 
