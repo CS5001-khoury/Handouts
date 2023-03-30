@@ -119,3 +119,17 @@ class Stack:
 Take a moment to draw out the visualizations of the queue. What do you think the code is doing? Which side are new items being added to? Which side are items being removed from?
 
 
+## Task
+
+To get some practice, lets write a program that reads in a file, and either stores that file into a queue or a stack. Then the program will print out the contents of the queue or stack. Since we are doing this as a group, try to break up the tasks between the group members.
+* 1 person - focuses on the queue
+* 1 person - focuses on the stack
+* 1 person - focuses on reading in the file. Make sure to take in both a file name and a queue or stack.
+* 1 person - focuses on 'gluing' the code together and printing out the contents of the queue or stack.
+* everyone - focuses on testing it
+
+Dividing up tasks is common in development. It is important to know how to work with others. It is also important to know how to work on your own. 
+
+
+## Finally
+Check-in with each other on how your final project is going. 
