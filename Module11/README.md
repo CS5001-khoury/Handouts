@@ -1,4 +1,4 @@
-# Module 11 - FILO and LIFO
+# Module 11 - FIFO and LIFO
 
 In computer science, you will often hear FIFO and LIFO. These are acronyms for First In First Out and Last In First Out. These are two different ways of organizing data. In this module, we will explore these two different ways of organizing data. How you organize the data in your program can greatly reduce the amount of time it takes to complete a task. This is just a glimpse of what you will really dive into in future courses! 
 
