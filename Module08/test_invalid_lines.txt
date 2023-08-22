@@ -1,7 +1,0 @@
-# hello, this is a line to be skipped
-1
-2
-1a
-the above is an invalid line, as is this - though common format to include
-# comment marks
-3
